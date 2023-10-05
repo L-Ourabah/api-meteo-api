@@ -1,13 +1,158 @@
-body {
+/* Reset CSS pour réinitialiser les styles par défaut du navigateur */
+body, h1, h2, h3, p, ul, li {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Style de fond pour la page */
+body {
+  background-color: #6cded4; /* Couleur de fond */
+  font-family: Arial, sans-serif;
+ 
 }
+
+/* Conteneur principal */
+.page-meteo {
+  max-width: 800px; /* Largeur maximale de la page */
+  margin: 0 auto; /* Centrer la page horizontalement */
+  padding: 50px;
+ 
+  
+}
+
+/* Section de recherche */
+.recherche {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Champ de recherche */
+input[type="text"] {
+  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: aquamarine;
+  border-radius: 5px;
+}
+
+/* Bouton de recherche */
+input[type="text"]:focus {
+  outline: none;
+}
+
+/* Message de destination non trouvée */
+.destination-not-found {
+  text-align: center;
+  color: #ff0000; /* Couleur du texte en cas de destination non trouvée */
+  font-weight: bold;
+}
+
+/* Conteneur d'informations météorologiques */
+.information {
+  background-color: #e6e6e6; /* Fond de la section d'informations */
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Titre de la section d'informations actuelles */
+.actu {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.contenaire-actu{
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Ville et pays */
+.localisation h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Température actuelle */
+.temperature h2 {
+  font-size: 48px;
+}
+
+/* Description météorologique */
+.description h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+
+/* Icône météo */
+.icones img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+/* Informations supplémentaires */
+.infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Ressenti */
+.ressenti,
+.temperature-min-max,
+.humidité,
+.vent,
+.pression {
+  flex: 1;
+  text-align: center;
+}
+
+/* Style pour les prévisions à trois jours */
+.daily-forecast {
+  background-color: #e6e6e6; /* Fond de la section de prévisions */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Titre des jours */
+.daily-forecast h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style pour chaque prévision à trois jours */
+.day3 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+/* Heure de la prévision */
+.new-date p {
+  font-size: 16px;
+}
+
+/* Température de la prévision */
+.prevTemp p {
+  font-size: 20px;
+}
+
+/* Description de la prévision */
+.prevDescription p {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+/* Mini/Max de la prévision */
+.prevMiniMax p {
+  font-size: 16px;
+}
+
+/* Icône météo de la prévision */
+.logo2 {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+
+
