@@ -160,9 +160,7 @@ function App() {
                                     {data.main ? <h3>{Math.floor(data.main.feels_like)}°C</h3> : null}
                                     <p>Ressenti</p>
                                 </div>
-                                <div className='temperature-min-max'>
-                                    {Math.floor(data.main.temp_min)}°C / {Math.floor(data.main.temp_max)}°C<p>Mini/Max</p>
-                                </div>
+                               
                                 <div className='humidité'>
                                     {data.main ? <h3>{data.main.humidity}%</h3> : null}
                                     <p>💧</p>
@@ -176,6 +174,11 @@ function App() {
                                     {data.wind ? <h3>{data.main.pressure} bar</h3> : null}
                                     <p>🧭</p>
                                 </div>
+                                
+                                <div className='temperature-min-max'>
+                                    {Math.floor(data.main.temp_min)}°C / {Math.floor(data.main.temp_max)}°C<p>Mini/Max</p>
+                                </div>
+
                             </div>
                         </div>
                         <div className='daily-forecast'>
@@ -205,10 +208,7 @@ function App() {
                                                     {/* Affiche la description météorologique. */}
                                                     <p>{forecast.weather[0].description}</p>
                                                 </div>
-                                                <div className="prevMiniMax">
-                                                    {/* Affiche la température minimale et maximale pour la journée. */}
-                                                    <p>{Math.floor(forecast.main.temp_min)}°C / {Math.floor(forecast.main.temp_max)}°C</p>
-                                                </div>
+                                               
                                                 <img className='logo2'
                                                     // Affiche l'icône météorologique correspondante.
                                                     src={`http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`}

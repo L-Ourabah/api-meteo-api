@@ -91,6 +91,7 @@ input[type="text"]:focus {
 
 /* Informations supplémentaires */
 .infos {
+  margin-top: 3%;
   display: flex;
   justify-content: space-between;
 }
@@ -101,13 +102,14 @@ input[type="text"]:focus {
 .humidité,
 .vent,
 .pression {
+  font-weight: bold;
   flex: 1;
   text-align: center;
 }
 
 /* Style pour les prévisions à trois jours */
 .daily-forecast {
-  background-color: #e6e6e6; /* Fond de la section de prévisions */
+  background-color: #446465; /* Fond de la section de prévisions */
   padding: 20px;
   border-radius: 5px;
 }
@@ -143,15 +145,53 @@ input[type="text"]:focus {
   text-transform: capitalize;
 }
 
-/* Mini/Max de la prévision */
-.prevMiniMax p {
-  font-size: 16px;
-}
+
 
 /* Icône météo de la prévision */
 .logo2 {
   max-width: 50px;
   max-height: 50px;
+}
+@media (max-width:760px) {
+  /* Heure de la prévision */
+.new-date p {
+  font-size: 10px;
+}
+
+/* Température de la prévision */
+.prevTemp p {
+  font-size: 10px;
+}
+
+/* Description de la prévision */
+.prevDescription p {
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.localisation h1 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Température actuelle */
+.temperature h2 {
+  font-size: 38px;
+}
+
+/* Description météorologique */
+.description h3 {
+  font-size: 10px;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.ressenti,
+.temperature-min-max,
+.humidité,
+.vent,
+.pression {
+ font-size: 10px;
+}
 }
 
 
